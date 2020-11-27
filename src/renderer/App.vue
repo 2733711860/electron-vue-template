@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view class="view-page"></router-view>
   </div>
 </template>
 
@@ -11,5 +11,11 @@
 </script>
 
 <style>
-  /* CSS */
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	html, body, #app, .view-page{
+		height: 100%;
+	}
 </style>
