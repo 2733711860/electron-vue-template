@@ -18,9 +18,16 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
-    height: 563,
+    width: 1050,
+		height: 690,
+		minWidth: 1050,
+		minHeight: 690,
+		frame: false, // 去掉最顶部的导航 以及 最大化 最小化 关闭按钮
     useContentSize: true,
-    width: 1000
+		transparent: false,
+		webPreferences: {
+			// devTools: false,
+		}
   })
 
   mainWindow.loadURL(winURL)
@@ -28,6 +35,11 @@ function createWindow () {
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+	
+	// 去掉顶部菜单
+	mainWindow.setMenu(null); 
+	
+	require('./icpMain.js');
 }
 
 app.on('ready', createWindow)

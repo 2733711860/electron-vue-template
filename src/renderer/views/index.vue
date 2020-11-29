@@ -1,11 +1,11 @@
 <template>
 	<div class="all-page">
-		<music-lyric class="lyric-page"></music-lyric>
+		<music-lyric class="lyric-page" text='按钮'></music-lyric>
 	</div>
 </template>
 
 <script>
-import musicLyric from '@/components/music-swiper.vue';
+import musicLyric from '@/components/music-left/Button.vue';
 export default {
 	components: {
 		musicLyric
@@ -25,4 +25,6 @@ export default {
 </script>
 
 <style scoped="scoped" lang="less">
+	.all-page{
+	}
 </style>

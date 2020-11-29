@@ -11,6 +11,7 @@ Vue.use(ElementUI);
 
 import './assets/css/common.css';
 import 'swiper/dist/css/swiper.css';
+import './assets/Iconfont/css/iconfont.css'
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
