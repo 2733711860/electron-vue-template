@@ -2,16 +2,26 @@
 	<div class="descover-page">
 		<music-swiper></music-swiper>
 		
-		<music-sheet class="item-sheet" v-for="i in 10"></music-sheet>
+		<div class="title">
+			<span>精选歌单</span>
+			<Icon icon="icon-iconset0420" isHover></Icon>
+		</div>
+		<music-sheet class="item-sheet" v-for="i in 4"></music-sheet>
+		
+		<div class="title">
+			<span>新歌推荐</span>
+			<Icon icon="icon-iconset0420" isHover></Icon>
+		</div>
 	</div>
 </template>
 
 <script>
 import musicSwiper from './components/music-swiper.vue';
 import musicSheet from './components/music-sheet.vue';
+import Icon from '@/components/music-left/Icon.vue';
 export default {
 	components: {
-		musicSwiper, musicSheet
+		musicSwiper, musicSheet, Icon
 	}
 }
 </script>
@@ -24,6 +34,18 @@ export default {
 			width: 21%;
 			height: 150px;
 			margin: 15px 2%;
+		}
+		
+		.title{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 40px 20px 0 20px;
+			span{
+				color: #333;
+				font-size: 18px;
+				font-weight: bold;
+			}
 		}
 	}
 </style>

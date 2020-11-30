@@ -39,7 +39,7 @@ export default {
 
 	.ry-swiper .swiper-slide {
 		width: 45%;
-		height: 180px;
+		height: 200px;
 		opacity: .7;
 		transform: scale(0.7);
 		-webkit-transform: scale(0.7);

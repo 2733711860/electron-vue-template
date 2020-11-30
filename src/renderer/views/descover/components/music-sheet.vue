@@ -25,16 +25,18 @@ export default {
 		width: 150px;
 		height: 150px;
 		display: inline-block;
+		cursor: pointer;
 		.top{
 			width: 100%;
 			height: 100%;
 			position: relative;
 			overflow: hidden;
 			border-radius: 8px;
+			box-shadow: 0 6px 18px #9d9d9d;
 			background-image: url(../../../../../static/image/11.jpg);
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
-			opacity: .7;
+			opacity: .8;
 			transform: translateZ(0) scale(1, 1);
 			-webkit-transform: translateZ(0) scale(1, 1);
 			-moz-transform: translateZ(0) scale(1, 1);
@@ -92,6 +94,7 @@ export default {
 		}
 		.text{
 			padding: 10px 5px;
+			text-align: center;
 			display: -webkit-box;
 			overflow: hidden;
 			text-overflow: ellipsis;
