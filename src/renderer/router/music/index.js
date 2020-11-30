@@ -1,16 +1,16 @@
 export default [
 	{
 	  path: '/',
-	  redirect: '/index'
+	  redirect: '/descover'
 	},
   {
-		path: '/index',
-		name: 'index',
+		path: '/descover',
+		name: 'descover',
 		component: resolve => {
-			require(['@/views/index.vue'], resolve)
+			require(['@/views/descover/index.vue'], resolve)
 		},
 		meta: {
-			title: '首页'
+			title: '发现'
 		}
   }
 ]

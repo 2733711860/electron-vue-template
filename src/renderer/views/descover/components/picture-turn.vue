@@ -1,12 +1,11 @@
 <template>
-	<div class="swiper-container">
+	<div class="swiper-container" id="sheetSwiper">
 	  <div class="swiper-wrapper">
 	    <div class="swiper-slide" ontouchstart="this.classList.toggle('hover');" v-for="i in 10">
 				<div class="container">
 					<div class="front">
 						<div class="inner">
-							<p>标题</p>
-							<span>信息</span>
+							<span>信息信息信息信息信息信息信息信息信息信息信息信息</span>
 						</div>
 					</div>
 					<div class="back">
@@ -22,7 +21,7 @@
 import Swiper from 'swiper';
 export default {
 	mounted() {
-		new Swiper ('.swiper-container', {
+		new Swiper ('#sheetSwiper', {
 			slidesPerView: 'auto',
 			spaceBetween: 30
 		})
@@ -31,8 +30,12 @@ export default {
 </script>
 
 <style scoped="scoped" lang="less">
+	.swiper-container{
+		width: 100%;
+		padding: 20px 0;
+	}
 	.swiper-slide{
-		width: 200px;
+		width: 150px;
 	}
 	.container{
 	  -webkit-transform-style: preserve-3d;
@@ -54,7 +57,7 @@ export default {
 		        backface-visibility: hidden;
 		text-align: center;
 		// min-height: 280px;
-		height: 200px;
+		height: 150px;
 		border-radius: 10px;
 		color: #fff;
 	}
@@ -68,18 +71,20 @@ export default {
 	
 	.front:after{
 		position: absolute;
-	    top: 0;
-	    left: 0;
-	    z-index: 1;
-	    width: 100%;
-	    height: 100%;
-	    content: '';
-	    display: block;
-	    opacity: .6;
-	    background-color: #000;
-	    -webkit-backface-visibility: hidden;
-	            backface-visibility: hidden;
-	    border-radius: 10px;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		content: '';
+		display: block;
+		opacity: .6;
+		-webkit-backface-visibility: hidden;
+						backface-visibility: hidden;
+		border-radius: 10px;
+		background-image: url(../../../../../static/image/11.jpg);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
 	}
 	.container:hover .front,
 	.container:hover .back{
@@ -98,19 +103,22 @@ export default {
 	}
 	
 	.inner{
-	    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
-	    transform: translateY(-50%) translateZ(60px) scale(0.94);
-	    top: 50%;
 	    position: absolute;
+			bottom: 10px;
 	    left: 0;
 	    width: 100%;
-	    padding: 2rem;
 	    -webkit-box-sizing: border-box;
 	    box-sizing: border-box;
 	    outline: 1px solid transparent;
 	    -webkit-perspective: inherit;
 	    perspective: inherit;
 	    z-index: 2;
+			display: -webkit-box;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			padding: 0 7px;
 	}
 	
 	.container .back{
@@ -141,28 +149,9 @@ export default {
 	          transform-style: preserve-3d;
 	}
 	
-	.front .inner p{
-	  font-size: 2rem;
-	  margin-bottom: 2rem;
-	  position: relative;
-	}
-	
-	.front .inner p:after{
-	  content: '';
-	  width: 4rem;
-	  height: 2px;
-	  position: absolute;
-	  background: #C6D4DF;
-	  display: block;
-	  left: 0;
-	  right: 0;
-	  margin: 0 auto;
-	  bottom: -.75rem;
-	}
 	
 	.front .inner span{
 	  color: rgba(255,255,255,0.7);
-	  font-family: 'Montserrat';
 	  font-weight: 300;
 	}
 	

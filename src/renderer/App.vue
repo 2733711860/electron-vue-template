@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-		<music-left></music-left>
+		<music-left class="music-left"></music-left>
 		
 		<div class="music-right">
 			<music-header></music-header>
@@ -35,10 +35,17 @@ export default {
 	}
 	#app{
 		display: flex;
+		justify-content: space-between;
 		font-size: 17px;
 		color: #6b6b6b;
+		font-family: "microsoft yahei";
+		.music-left{
+			width: 230px;
+			height: 100%;
+		}
 		.music-right{
 			flex: 1;
+			overflow-x: auto;
 			height: 100%;
 			display: flex;
 			flex-direction: column;
@@ -48,6 +55,7 @@ export default {
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 			.view-page{
+				width: 100%;
 				flex: 1;
 				overflow-y: auto;
 				background-color: #fff;

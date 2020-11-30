@@ -31,8 +31,6 @@ export default {
 
 <style scoped="scoped" lang="less">
 	.music-left{
-		width: 230px;
-		height: 100%;
 		position: relative;
 		background: hsla(0, 0%, 100%, .5) border-box;
 		overflow: hidden;
