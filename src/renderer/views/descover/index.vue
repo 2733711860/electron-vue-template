@@ -6,12 +6,13 @@
 			<span>精选歌单</span>
 			<Icon icon="icon-iconset0420" isHover></Icon>
 		</div>
-		<music-sheet class="item-sheet" v-for="i in 4"></music-sheet>
+		<music-sheet class="item-sheet" v-for="i in 4" :key="i"></music-sheet>
 		
 		<div class="title">
 			<span>新歌推荐</span>
 			<Icon icon="icon-iconset0420" isHover></Icon>
 		</div>
+		<music-list></music-list>
 	</div>
 </template>
 
@@ -19,9 +20,10 @@
 import musicSwiper from './components/music-swiper.vue';
 import musicSheet from './components/music-sheet.vue';
 import Icon from '@/components/music-left/Icon.vue';
+import musicList from './components/music-list.vue';
 export default {
 	components: {
-		musicSwiper, musicSheet, Icon
+		musicSwiper, musicSheet, Icon, musicList
 	}
 }
 </script>
