@@ -8,10 +8,6 @@
 		</div>
 		<music-sheet class="item-sheet" v-for="i in 4" :key="i"></music-sheet>
 		
-		<div class="title">
-			<span>新歌推荐</span>
-			<Icon icon="icon-iconset0420" isHover></Icon>
-		</div>
 		<music-list></music-list>
 	</div>
 </template>

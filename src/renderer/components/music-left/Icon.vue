@@ -1,5 +1,5 @@
 <template>
-	<span class="icon-con" :class="{'needHover': isHover}" :style="iconStyle">
+	<span class="icon-con" :class="{'needHover': isHover}" :style="iconStyle" @click="goClick">
 		<i class="iconfont thisicon" :class="icon" :style="{'fontSize': fontSize + 'px'}"></i>
 	</span>
 </template>
@@ -35,6 +35,12 @@ export default {
 			width: fontSize * 1.8 + 'px',
 			height: fontSize * 1.8 + 'px',
 			lineHeight: fontSize * 1.8 + 'px'
+		}
+	},
+	
+	methods: {
+		goClick () {
+			this.$emit('click')
 		}
 	}
 }
